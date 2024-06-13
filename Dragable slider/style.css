@@ -1,0 +1,201 @@
+   * {
+         padding: 0;
+         margin: 0;
+   }
+
+   body {
+         background-color: darkslategray;
+   }
+
+   .testimonial-slider {
+         display: flex;
+         justify-content: center;
+         padding: 20px;
+         border-radius: 10px;
+         width: 90%;
+         font-family: "Montserrat", sans-serif;
+         margin: auto;
+   }
+
+   .testimonial-1 {
+         padding: 40px;
+         background-color: powderblue;
+         margin-left: 20px;
+         border-radius: 12px;
+   }
+
+   .testimonial {
+         border-radius: 12px;
+         padding: 40px;
+         background-color: rgb(35, 195, 227);
+         margin-right: 20px;
+   }
+
+   .content {
+         margin-top: 25px;
+   }
+
+   .quote {
+         font-size: 18px;
+         font-weight: 500;
+         line-height: 1.5;
+   }
+
+   .star {
+         margin-bottom: 8px;
+   }
+
+   .fa-solid {
+         font-size: 20px;
+         color: yellow;
+         border: none;
+         padding-right: 2px;
+   }
+
+   .image-feature {
+         display: flex;
+         justify-content: flex-start;
+         align-items: center;
+         margin-top: 20px;
+   }
+
+   .image-para {
+         display: flex;
+         justify-content: center;
+   }
+
+   .image-feature p {
+         font-size: 16px;
+         line-height: 1.5;
+         font-weight: 400;
+   }
+
+   .image-feature p span {
+         font-weight: 500;
+   }
+
+   .navigation {
+         width: 90%;
+         margin-top: 20px;
+         display: flex;
+         justify-content: flex-end;
+   }
+
+   .prevBtn,
+   .nextBtn {
+         border: none;
+         background-color: transparent;
+   }
+
+   .nextBtn .fa-solid {
+         background-color: rgb(35, 195, 227);
+         border-radius: 50%;
+         cursor: pointer;
+         font-size: 24px;
+         padding: 12px;
+         color: powderblue;
+         border: none;
+   }
+
+   .prevBtn .fa-solid {
+         background-color: rgb(35, 195, 227);
+         border-radius: 50%;
+         cursor: pointer;
+         margin: 0 20px;
+         font-size: 24px;
+         padding: 12px;
+         border: none;
+         color: powderblue;
+   }
+
+   .prevBtn:hover,
+   .nextBtn:hover {
+         color: black;
+   }
+
+   @media (min-width:0) and (max-width:768px) {
+         .testimonial-slider {
+               padding-bottom: 0;
+         }
+
+         .testimonial-1,
+         .testimonial {
+               padding: 20px;
+               margin: 0;
+         }
+
+         .content {
+               margin-top: 10px;
+         }
+
+         .image-feature {
+               margin-top: 7px;
+         }
+
+         .quote {
+               font-size: 15px;
+               line-height: 1.3;
+         }
+
+         .image-feature p {
+               font-size: 14px;
+         }
+
+         .navigation {
+               margin: 0;
+         }
+
+         .prevBtn .fa-solid,
+         .nextBtn .fa-solid {
+               font-size: 18px;
+         }
+   }
+
+   @media (min-width:601px) and (max-width:768px) {
+         .navigation {
+               margin: 15px;
+         }
+
+         .testimonial-1 {
+               margin-left: 5px;
+         }
+
+         .testimonial {
+               margin-right: 5px;
+         }
+
+         .fa-solid {
+               font-size: 18px;
+         }
+   }
+
+   @media (min-width:769px) and (max-width:1024px) {
+
+         .testimonial-1,
+         .testimonial {
+               padding: 30px;
+
+         }
+
+         .quote {
+               line-height: 1.4;
+               font-size: 16px;
+         }
+
+         .content {
+               margin-top: 20px;
+         }
+
+         .image-feature {
+               margin-top: 10px;
+         }
+
+         .prevBtn .fa-solid,
+         .nextBtn .fa-solid {
+               font-size: 20px;
+         }
+
+         .navigation {
+               margin: 15px;
+         }
+   }
