@@ -1,0 +1,183 @@
+* {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: "Roboto", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      color: #eae2b7;
+}
+
+body {
+      max-width: 1280px;
+      height: 100vh;
+      margin: auto;
+      background-image: linear-gradient(to top left, #7a3f97 240px, #224962 80%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+}
+
+nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 40px;
+
+      & ul {
+            position: absolute;
+            top: 0;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            column-gap: 10px;
+            font-size: 14px;
+
+            & li {
+                  list-style: none;
+                  padding: 10px 15px;
+                  background-color: #023047;
+                  border-radius: 5px;
+
+                  & a {
+                        text-decoration: none;
+                        color: #eae2b7;
+                        font-weight: 400;
+                  }
+            }
+
+      }
+}
+
+main {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 50px;
+
+      & .Important-Note {
+            padding: 10px;
+            list-style: none;
+            background: #023047;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-size: 13px;
+
+            & li {
+                  padding: 5px 0;
+
+                  & .fa-solid {
+                        padding-right: 5px;
+                  }
+            }
+      }
+}
+
+.buttons {
+      display: flex;
+      gap: 30px;
+}
+
+#btn1,
+#btn2 {
+      padding: 10px 25px;
+      font-size: 14px;
+      font-weight: 500;
+      border: none;
+      border-radius: 20px;
+      background: #023047;
+      color: #eae2b7;
+      cursor: pointer;
+      box-shadow: 3px 3px 10px rgb(36, 33, 33);
+}
+
+#btn2 {
+      background: rgb(196, 233, 31);
+      color: black;
+}
+
+#display-div {
+      width: 30%;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #00000030;
+      color: #eae2b7;
+      margin-top: 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      position: relative;
+      transition: .3s all;
+      padding: 15px;
+      border-left: 4px solid white;
+      line-height: 1.6;
+
+      &:hover::after {
+            content: "Copy";
+            position: absolute;
+            top: -60%;
+            right: 10%;
+            background: #219dbc;
+            color: black;
+            padding: 10px;
+            border-radius: 5px;
+      }
+
+      &:active:after {
+            content: "Copied";
+      }
+}
+
+.para {
+      font-size: 14px;
+      font-weight: 500;
+      margin-top: 20px;
+}
+
+@media screen and (max-width: 576px) {
+      nav ul {
+            grid-template-columns: repeat(2, 1fr);
+            row-gap: 10px;
+            font-size: 12px;
+
+            & li {
+                  padding: 10px;
+            }
+      }
+
+      main {
+            align-items: center;
+            padding: 0 15px;
+      }
+
+      .Important-Note {
+            font-size: 12px;
+      }
+
+      #btn {
+            font-size: 12px;
+            padding: 10px 15px;
+      }
+
+      #display-div {
+            width: 100%;
+            font-size: 12px;
+            padding: 10px;
+      }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+      #display-div {
+            width: 60%;
+      }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+      #display-div {
+            width: 50%;
+      }
+}
