@@ -1,0 +1,129 @@
+* {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: "Inter", sans-serif;
+}
+
+body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background: #023047;
+      height: auto;
+}
+
+.info {
+      padding: 20px 50px 0;
+      color: white;
+      text-align: center;
+      line-height: 1.6;
+
+      &>span {
+            color: #00ccff;
+            font-weight: 500;
+      }
+}
+
+h5 {
+      font-size: 16px;
+      color: white;
+      font-weight: 600;
+}
+
+.input-file {
+      display: flex;
+      gap: 30px;
+      margin-top: 50px;
+}
+
+#input-value {
+      padding: 10px;
+      font-size: 18px;
+      border-radius: 30px;
+      border: none;
+
+      &:focus-visible {
+            outline: none;
+      }
+
+      color: #023047;
+}
+
+.add-btn,
+.deletebtn {
+      padding: 10px 20px;
+      font-size: 18px;
+      border-radius: 30px;
+      border: none;
+      text-transform: capitalize;
+      color: #023047;
+      background: #219ebc;
+      cursor: pointer;
+      color: white;
+      transition: .3s;
+
+      &:hover {
+            background: #fff;
+            color: #219ebc;
+            font-weight: 600;
+      }
+}
+
+.item-container {
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+      gap: 20px;
+}
+
+.item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      & p {
+            padding-right: 20px;
+            font-size: 20px;
+            color: white;
+      }
+
+      & .deletebtn {
+            margin-left: 20px;
+      }
+}
+
+@media (max-width: 576px) {
+      .info {
+            font-size: 14px;
+      }
+
+      .input-file {
+            flex-direction: column;
+      }
+
+      .item-container {
+            width: auto;
+            gap: 15px;
+      }
+
+      .item {
+            gap: 20px;
+      }
+
+      .item>p {
+            padding-right: 10px;
+            font-size: 16px;
+      }
+
+      .add-btn,
+      .deletebtn {
+            font-size: 16px;
+            padding: 10px 16px;
+      }
+
+      .deletebtn {
+            margin-left: 10px;
+      }
+}
