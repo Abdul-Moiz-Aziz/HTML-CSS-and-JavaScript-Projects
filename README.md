@@ -15,3 +15,7 @@ Each folder is contained in its very own listing and includes the following file
 - `style.css`: The CSS document containing styles for the html file.
 
 - `script.js`: The JavaScript file containing interactive functionality for the project.
+
+## How to Download the Source Code
+
+Click the top green <b>Code</b> button and download the <b>ZIP file</b> of all projects.
