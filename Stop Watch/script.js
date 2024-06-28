@@ -17,11 +17,9 @@ start.addEventListener("click", () => {
       }, 1000);
 });
 
-
 stop.addEventListener("click", () => {
       clearInterval(intervalID);
 })
-
 
 clear.addEventListener("click", () => {
       clearInterval(intervalID);
@@ -38,7 +36,7 @@ getTime.addEventListener("click", () => {
                         displayTime.innerText = `${divide} minute`;
                   }
             }
-            else if (count > 60) {
+            else if (count > 120) {
                   display.innerText = count;
                   if (modulus === 0) {
                         modulus = "";
@@ -46,6 +44,16 @@ getTime.addEventListener("click", () => {
                   }
                   else {
                         displayTime.innerText = `${divide} minutes : ${modulus} seconds`;
+                  }
+            }
+            else if (count > 60) {
+                  display.innerText = count;
+                  if (modulus === 0) {
+                        modulus = "";
+                        displayTime.innerText = `${divide} minutes`;
+                  }
+                  else {
+                        displayTime.innerText = `${divide} minute : ${modulus} seconds`;
                   }
             }
             else {
