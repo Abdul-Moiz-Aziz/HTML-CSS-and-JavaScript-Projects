@@ -1,0 +1,103 @@
+* {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 20px;
+      background-color: #354f52;
+}
+
+section {
+      background-color: #cad2c5;
+      min-width: 50%;
+      min-height: 50vh;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      box-shadow: 0 0 10px #a3b18a;
+      border-radius: 10px;
+}
+
+#display-div {
+      padding: 20px;
+      font-size: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #354f52;
+}
+
+.btns-area {
+      padding: 10px;
+      border-left: 2px solid #354f52;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+}
+
+.btns {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+}
+
+.btn {
+      padding: 10px 14px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #354f52;
+      border-radius: 5px;
+      border: none;
+      color: #cad2c5;
+      text-transform: capitalize;
+      transition: .2s;
+      border: 2px solid transparent;
+
+      &:hover {
+            background-color: transparent;
+            border: 2px solid #354f52;
+            color: #354f52;
+            font-weight: 600;
+      }
+}
+
+.display-time {
+      font-size: 20px;
+      min-width: 100%;
+      background-color: #354f52;
+      min-height: 50px;
+      margin-top: 10px;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      padding: 0 10px;
+      color: #cad2c5;
+}
+@media (max-width: 850px){
+      body {
+            padding: 20px;
+      }
+}
+@media (max-width: 640px) {
+      body {
+            padding: 20px;
+      }
+
+      section {
+            grid-template-columns: 1fr;
+            width: 100%;
+      }
+
+      .btns-area {
+            border: none;
+            border-top: 2px solid #354f52;
+      }
+}
