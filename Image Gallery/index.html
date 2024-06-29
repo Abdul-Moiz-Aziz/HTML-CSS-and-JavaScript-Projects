@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Image Gallery</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+            integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+      <h1 class="main-heading">A Beautiful Nature Image Gallery</h1>
+      <h2 style="color: #f1faee; font-size: 18px;">Click on the Image to see Gallery</h2>
+      <section class="display-images">
+            <img src="1.png" alt="Galacier" class="clickable-images">
+            <img src="2.png" alt="Mountain" class="clickable-images">
+            <img src="3.png" alt="Forest" class="clickable-images">
+            <img src="4.png" alt="Lake" class="clickable-images">
+            <img src="5.png" alt="Sunrise" class="clickable-images">
+            <img src="6.png" alt="WaterFall" class="clickable-images">
+      </section>
+      <section class="slider-image-section">
+            <div class="cross-btn">
+                  <button class="cross">
+                        <i class="fa-solid fa-xmark"></i>
+                  </button>
+            </div>
+            <div class="main-slide">
+                  <div class="slide-image-div">
+                        <button class="prev">
+                              <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+                        <div class="slide-div">
+                              <img src="" alt="" class="slide-image">
+                        </div>
+                        <button class="next">
+                              <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                  </div>
+            </div>
+            <div class="show-images-bottom">
+                  <img src="1.png" alt="Galacier" class="opac-image click-image-2">
+                  <img src="2.png" alt="Mountain" class="opac-image  click-image-2">
+                  <img src="3.png" alt="Forest" class="opac-image  click-image-2">
+                  <img src="4.png" alt="Lake" class="opac-image  click-image-2">
+                  <img src="5.png" alt="Sunrise" class="opac-image  click-image-2">
+                  <img src="6.png" alt="WaterFall" class="opac-image click-image-2">
+            </div>
+      </section>
+      <script src="script.js"></script>
+</body>
+
+</html>
