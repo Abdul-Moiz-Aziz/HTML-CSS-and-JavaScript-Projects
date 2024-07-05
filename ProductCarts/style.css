@@ -1,0 +1,219 @@
+body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+}
+
+h1 {
+      text-align: center;
+      color: #023047;
+      margin-top: 20px;
+      font-size: 48px;
+}
+
+.container {
+      width: 90%;
+      margin: 20px auto 50px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+}
+
+.product {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin: 10px 0 0;
+      text-align: center;
+
+      & img {
+            max-width: 100%;
+            border-radius: 8px;
+      }
+}
+
+
+.title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px 0;
+      font-weight: 600;
+      font-size: 24px;
+      color: #ff9f1c;
+}
+
+.pricing {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 10px 0;
+}
+
+.price {
+      font-size: 14px;
+      margin-right: 10px;
+      font-weight: 600;
+      color: #ff9f1c;
+}
+
+.main-price {
+      text-align: left;
+      font-weight: 700;
+      font-size: 18px;
+      color: #023047;
+}
+
+.product-number {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+
+      &>.quantity-name {
+            color: #023047;
+            font-weight: 600;
+      }
+
+      & .number {
+            font-size: 20px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: #023047;
+            color: #fff;
+      }
+}
+
+.btn {
+      background-color: #023047;
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      margin: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+            background-color: #8ecae6;
+            color: #023047;
+      }
+}
+
+.total-price {
+      position: fixed;
+      right: 0;
+      top: 50%;
+      width: 30%;
+      translate: 100% -50%;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      background-color: #8ecae6;
+      transition: translate 0.3s;
+}
+
+.total-price.switch {
+      translate: 0 -50%;
+}
+
+.total-div {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0 10px 20px;
+      border-bottom: 1px solid #ddd;
+}
+
+.total-div.header {
+      font-weight: bold;
+      border-bottom: 2px solid #333;
+}
+
+.total-product-name,
+.total-quantity-name,
+.total-price-name {
+      flex: 1;
+      text-align: center;
+      color: #023047;
+}
+
+.total {
+      font-size: 20px;
+      font-weight: bold;
+      color: #333;
+      text-align: center;
+      display: block;
+      margin-top: 10px;
+}
+
+.toggle-button {
+      padding: 20px 10px;
+      translate: -30px 0;
+      font-size: 18px;
+      color: #333;
+      background-color: #8ecae6;
+      border: none;
+      cursor: pointer;
+      border-radius: 8px 0 0 8px;
+      animation: animate 1s infinite alternate;
+}
+
+@keyframes animate {
+      0% {
+            box-shadow: 0 0 0 0 #02304700;
+      }
+
+      100% {
+            box-shadow: 0 0 8px 5px #02304796;
+      }
+}
+
+.all-prices-total {
+      position: absolute;
+      top: 0;
+      left: 20px;
+      font-size: 24px;
+      font-weight: 600;
+      padding: 20px 10px;
+      color: #023047;
+}
+
+@media screen and (max-width: 576px) {
+      h1 {
+            font-size: 24px;
+            margin: 20px 0;
+      }
+
+      .all-prices-total {
+            font-size: 20px;
+      }
+}
+
+@media screen and (max-width: 992px) {
+      body {
+            padding: 0 20px;
+      }
+
+      .container {
+            width: 100%;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      }
+
+      .total-price {
+            width: 70%;
+      }
+
+      .total-product-name,
+      .total-quantity-name,
+      .total-price-name {
+            font-size: 14px;
+      }
+}
+
+@media (max-width: 576px) {
+      .total-price {
+            width: 90%;
+      }
+}
