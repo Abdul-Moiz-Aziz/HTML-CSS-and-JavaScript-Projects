@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8" />
+      <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+            integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet">
+      <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0" />
+      <title>tokoo Shopping</title>
+</head>
+
+<body>
+      <div id="dull-body"></div>
+      <div class="notification-element"></div>
+
+      <header class="header">
+            <nav class="navbar">
+                  <div class="navbar-upper container">
+                        <button class="show-other-pages">
+                              <i class="fa-solid fa-bars"></i>
+                        </button>
+                        <div class="logo">
+                              <a href="index.html" class="brand-link">
+                                    <img src="images/brand-logo.png" alt="" class="brand-logo">
+                              </a>
+                        </div>
+                        <div class="search-products">
+                              <div class="search-element">
+                                    <span class="material-symbols-outlined search-btn">
+                                          search
+                                    </span>
+                                    <input type="text" class="search-input" placeholder="What are you looking for ?">
+                              </div>
+                        </div>
+                        <div class="other-pages-element">
+                              <ul class="other-pages-list">
+                                    <li><a href="about.html">about us</a></li>
+                                    <li><a href="contact.html">contact us</a></li>
+                              </ul>
+                        </div>
+                        <div class="wishlist-cart-element">
+                              <a href="wishlist.html" class="wishlist-link">Wishlist</a>
+                              <a href="cart.html" class="cart-link">
+                                    <span class="material-symbols-outlined shopping_cart">
+                                          shopping_cart
+                                    </span>
+                                    <span class="cart-count count">0</span></i></a>
+                        </div>
+                  </div>
+                  <div class="show-mini-cart-container">
+
+                  </div>
+            </nav>
+            <div class="categories-element">
+                  <div class="categories-shows container">
+                        <button class="categories all-categories">all categories <i
+                                    class="fa-solid fa-chevron-right"></i></button>
+                  </div>
+                  <div class="all-categories-element">
+                        <a href="category.html" class="view-all-categories">view all</a>
+                        <ul class="category-list"></ul>
+                  </div>
+            </div>
+      </header>
+      <main>
+            <section class="main-wishlist-container main-product-container">
+                  <div class="container cart-upper-sec mr">
+                        <div class="cart-heading page-heading">
+                              <h2>
+                                    Your Wishlist Summary
+                              </h2>
+                        </div>
+                        <div class="wishlist-numbering-items item-numbering">
+                              Review your wishlist with <span class="wishlist-item-no"></span>
+                        </div>
+                  </div>
+                  <hr>
+                  <div class="container wishlist-product-removed">
+                        <span class="removed-product-name wishlist-removed-product-name"></span>
+                        <button class="remove-product-name-button wishlist-remove-product-name-button">
+                              <i class="fa-solid fa-xmark remove-product-icon"></i>
+                        </button>
+                  </div>
+                  <div class="product-removed-name container mr">
+                        <p class="removed-name wishlist-product-removed-name"></p>
+                        <i class="fa-solid fa-xmark"></i>
+                  </div>
+                  <div class="container main-wishlist-products-sec mr p-20">
+                  </div>
+            </section>
+            <section class="empty-section wishlist-empty-section">
+                  <div class="container">
+                        <h2 class="empty-text">
+                              Your wishlist is currently empty.
+                        </h2>
+                        <div class="shopping-icon-element">
+                              <span class="material-symbols-outlined shopping-icon">
+                                    shopping_cart
+                              </span>
+                        </div>
+                        <div class="return-to-shop">
+                              <a href="index.html" class="return-btn">Return to shop</a>
+                        </div>
+                  </div>
+            </section>
+            <section class="mini-cart-items-main-container p-20">
+                  <div class="mini-cart-items-container">
+
+                  </div>
+                  <div class="view-all-cart-products-element">
+                        <a href="cart.html" class="view-all-cart-products">Cart</a>
+                  </div>
+                  <div class="empty-mini-cart">
+                        Your cart is empty
+                  </div>
+            </section>
+            <template id="mini-cart-item">
+                  <div class="mini-cart-item">
+                        <div>
+                              <img src="images/adidas-2.jpg" alt="" class="mini-cart-product-image">
+                        </div>
+                        <div class="mini-cart-info">
+                              <p class="mini-cart-product-name">ps3</p>
+                              <p class="mini-cart-product-price">34.34</p>
+                        </div>
+                        <button class="remove-from-cart-btn">
+                              <i class="fa-xmark fa-solid"></i>
+                        </button>
+                  </div>
+            </template>
+            <template id="wishlist-item-template">
+                  <div class="mainProductWishlist mainProduct">
+                        <button class="remove-product-from-wish">
+                              <i class="fa-solid fa-xmark"></i>
+                        </button>
+                        <img src="images/adidas-2.jpg" alt="" class="wishlist-product-image added-product-image">
+                        <p class="wishlist-product-name added-product-name product-name">ps3</p>
+                        <p class="wishlist-product-price product-price added-product-price product-price">34</p>
+                        <button class="wishlist-cart-btn">add to cart</button>
+                  </div>
+            </template>
+      </main>
+      <footer class="mr p-20">
+            <section class=" feature-container">
+                  <div class="container">
+                        <ul class="feature-list">
+                              <li class="feature-box">
+                                    <span class="material-symbols-outlined">
+                                          credit_card
+                                    </span>
+                                    <span class="feature-box-text">
+                                          100% Payment<br>
+                                          Secured
+                                    </span>
+                              </li>
+                              <li class="feature-box">
+                                    <span class="material-symbols-outlined">
+                                          wallet
+                                    </span>
+                                    <span class="feature-box-text">
+                                          Support lots<br>
+                                          of Payments
+                                    </span>
+                              </li>
+                              <li class="feature-box">
+                                    <span class="material-symbols-outlined">
+                                          support_agent
+                                    </span>
+                                    <span class="feature-box-text">
+                                          24hours/7days<br>
+                                          Support
+                                    </span>
+                              </li>
+                              <li class="feature-box">
+                                    <span class="material-symbols-outlined">
+                                          local_shipping
+                                    </span>
+                                    <span class="feature-box-text">
+                                          Free Delivery<br>
+                                          with $50
+                                    </span>
+                              </li>
+                              <li class="feature-box">
+                                    <span class="material-symbols-outlined">
+                                          shoppingmode
+                                    </span>
+                                    <span class="feature-box-text">
+                                          Best Price<br>
+                                          Guaranteed
+                                    </span>
+                              </li>
+                              <li class="feature-box">
+                                    <span class="material-symbols-outlined">
+                                          android
+                                    </span>
+                                    <span class="feature-box-text">
+                                          Mobile Apps<br>
+                                          Ready
+                                    </span>
+                              </li>
+                        </ul>
+                  </div>
+            </section>
+            <section class="main-footer-section">
+                  <div class="main-footer-upper">
+                        <div class="container footer-upper">
+                              <div class="brand-logo">
+                                    <img src="images/second-brand-logo.png" alt="">
+                              </div>
+                              <div class="social-media-links-element">
+                                    <p class="follow-text">
+                                          Follow us on:
+                                    </p>
+                                    <div class="social-media-icons">
+                                          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                                          <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                                          <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
+                                          <a href="#"><i class="fa-brands fa-google-plus"></i></a>
+                                          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+                  <div class="footer-hero-sec">
+                        <div class="container footer-hero">
+                              <div class="footer-column">
+                                    <p class="column-heading">Need help?</p>
+                                    <p class="call-number contact-info">
+                                          Call us <a href="">+1 00000 0000 0000</a>
+                                    </p>
+                                    <p class="email contact-info">E-mail us <a href="">hello@tokoo.com</a></p>
+                                    <p class="telegram-link contact-info">Join our Telegram <a href="">t.me/tokoo
+                                          </a></p>
+                              </div>
+                              <div class="footer-column footer-categories-column">
+                                    <p class="column-heading">Product Categories</p>
+                              </div>
+                              <div class="footer-column">
+                                    <p class="column-heading">Customers Area</p>
+                                    <a href="" class="footer-links">contact Us</a>
+                                    <a href="" class="footer-links">checkout</a>
+                                    <a href="" class="footer-links">cart</a>
+                                    <a href="" class="footer-links">shop</a>
+                              </div>
+                              <div class="footer-column">
+                                    <p class="column-heading">Download Apps</p>
+                                    <a href="" class="store-images">
+                                          <img src="images/appstore-1.jpg" alt="">
+                                    </a>
+                                    <a href="" class="store-images">
+                                          <img src="images/playstore-1.jpg" alt="">
+                                    </a>
+                              </div>
+                        </div>
+                  </div>
+                  <div class="main-footer-bottom">
+                        <div class="container footer-bottom">
+                              <div class="payment-cards-info">
+                                    <p class="acception-text">
+                                          We are accept
+                                    </p>
+                                    <div class="cards-image">
+                                          <img src="images/payment-logos.png" alt="">
+                                    </div>
+                              </div>
+                              <p class="copy-right-text">
+                                    © Copyright 2018 <a href=""> Tokoo </a>- All Rights Reserved
+                              </p>
+                        </div>
+                  </div>
+            </section>
+      </footer>
+      <script type="module" src="main.js"></script>
+      <script type="module" src="utils.js"></script>
+      <script type="module" src="contentStyling.js"></script>
+</body>
+
+</html>
